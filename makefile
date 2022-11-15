@@ -25,7 +25,7 @@ doc:
 
 # Archive
 archive:
-	tar -czf ANTOINE_Marcoly_GAME_Adrien.tar.gz *.c *.h makefile *.txt *.md
+	tar -czf ANTOINE_Marcoly_GAME_Adrien.tar.gz *.c *.h makefile *.txt *.md Doxyfile
 
 # Nettoyage
 clean:
