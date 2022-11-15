@@ -14,7 +14,7 @@
 
 
 /**
- * @fn Fonction qui initialise le niveau pour chaque fichier texte. Il prend en parametre un pointeur sur la grille de jeu et un pointeur sur le fichier contenant le niveau de jeu  
+ * @brief Fonction qui initialise le niveau pour chaque fichier texte. Il prend en parametre un pointeur sur la grille de jeu et un pointeur sur le fichier contenant le niveau de jeu  
  * 
  * @param file_path un fichier txt lu
  * @param grid une grille de jeu 
@@ -27,8 +27,8 @@ void init_level(const char* file_path,Grid* grid){
 		exit(-1);
 	}
 	char line[100] = {0};
-	int number_column = 0; // nombre de colonne
-	int number_row = 0; /// nombre de ligne
+	int number_column = 0; //number_column :nombre de colonne
+	int number_row = 0; //number_row :nombre de ligne
 	int number_goals = 0;
 	
 	// on lit la première ligne du fichier
@@ -55,8 +55,8 @@ void init_level(const char* file_path,Grid* grid){
 				case '$': ct = BOX;
 				break;
 				case '@': 
-				grid->player.x=current_column; ///< on prend x comme abscisse (colonne)
-				grid->player.y=current_row; ///< y comme ordonnée
+				grid->player.x=current_column; // x :abscisse (colonne)
+				grid->player.y=current_row; //y :ordonnée
 				ct=NONE;
 				break;
 				case '.': ct = GOAL;
@@ -76,8 +76,7 @@ void init_level(const char* file_path,Grid* grid){
 }
 
 /**
- * @fn Fonction qui affiche la grille du Sokoban
- * 
+ * @brief Fonction qui affiche la grille du Sokoban
  * @param grid la grille de jeu
  */
 void display (Grid* grid){
@@ -86,22 +85,22 @@ void display (Grid* grid){
 		for (int j = 0; j < grid->column_number; j++)
 		{
 			if(i==grid->player.y && j==grid->player.x)
-				printf("@");  ///< affichage du joueur
+				printf("@");  // @ :affichage du joueur
 			else
-				printf("%c", grid->game_grid[i][j]); ///<affichage du CaseType
+				printf("%c", grid->game_grid[i][j]); //affichage du CaseType
 		}
 		printf("\n");
 	}
 }
 
 /**
- * @fn Fonction qui désalloue la mémoire allouée dans la fonction init_level 
+ * @brief Fonction qui désalloue la mémoire allouée dans la fonction init_level 
  * 
  * @param grid la grille de jeu
  */
 void suppr_grid (Grid* grid){
 	for (int i =0; i<grid->row_number;i++){
-		free(grid->game_grid[i]);///< La boucle désalloue le tableau de CaseType de la ligne i
+		free(grid->game_grid[i]);// La boucle désalloue le tableau de CaseType de la ligne i
 	}
-	free(grid->game_grid); ///<désallocation du tableau de lignes
+	free(grid->game_grid); //désallocation du tableau de lignes
 }

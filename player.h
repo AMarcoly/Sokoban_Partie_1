@@ -30,8 +30,8 @@ enum Direction{
  */
 struct Player
 {
-    int x;  /** <x: position du joueur en colonne **/
-    int y;  /** <y : position du joueur par rapport aux lignes **/
+    int x;  ///<x: position du joueur en colonne 
+    int y;  ///<y: position du joueur par rapport aux lignes
 };
 
 /**

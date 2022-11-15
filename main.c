@@ -1,7 +1,7 @@
 /**
  * @file main.c
  * @author Marcoly ANTOINE/ Adrien GAME
- * @brief 
+ * @brief fichier principal 
  * @version 0.1
  * @date 2022-11-12
  * 
@@ -14,6 +14,11 @@
 #include "grid.h"
 #include "player.h"
 
+/**
+ * @brief Fonction principale du programme
+ * 
+ * @return int 
+ */
 int main(void){
 	bool start = false; // jeu commencé?
 	bool run = true; //booléen pour conditionner l'arrêt de la boucle principale

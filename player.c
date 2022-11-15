@@ -1,6 +1,6 @@
 /**
  * @file player.c
- * @author your name (you@domain.com)
+ * @author Marcoly ANTOINE/ Adrien GAME
  * @brief code pour le joueur
  * @version 0.1
  * @date 2022-11-12

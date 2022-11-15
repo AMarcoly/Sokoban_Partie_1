@@ -21,7 +21,7 @@ enum CaseType{
 	WALL = '#', 	/**< caractère réprésentant un mur **/
 	BOX = '$',		/**< caractère réprésentant une boite **/
 	PLAYER = '@',	/**< caractère réprésentant le joueur **/
-	GOAL = '.',		/**< caractère réprésentant le joueur **/
+	GOAL = '.',		/**< caractère réprésentant un objectif **/
 	NONE = ' '		/**< caractère réprésentant un espace vide **/
 };
 
@@ -54,19 +54,19 @@ typedef struct Grid Grid;
  * @fn fonction qui initie le niveau de jeu
  * 
  * @param file_path 
- * @param grid 
+ * @param grid Pointeur sur la grille de jeu
  */
 void init_level(const char* file_path, Grid* grid);
 
 /**
  * @fn fonction display qui affiche la grille de jeu
  * 
- * @param grid 
+ * @param grid (pointeur sur) La grille de jeu .
  */
 void display (Grid *grid);
 
 /**
- * @fn fonction permettant de faire bouger le joueur dans la grille
+ * @brief fonction permettant de faire bouger le joueur dans la grille
  * 
  * @param grid une grille de jeu
  * @param direction la direction dans laquelle on souhaite se diriger
