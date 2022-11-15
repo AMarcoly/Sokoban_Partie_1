@@ -48,7 +48,6 @@ int main(void){
 				{
 					move_player(&grid,(enum Direction) entry);
 					display(&grid);
-					//printf("player : x: %d  y:%d \n", grid.player.x,grid.player.y);
 				}
 				break;
 			}
