@@ -1,7 +1,7 @@
 /**
  * @file main.c
  * @author Marcoly ANTOINE/ Adrien GAME
- * @brief fichier principal 
+ * @brief Fichier principal 
  * @version 0.1
  * @date 2022-11-12
  * 
