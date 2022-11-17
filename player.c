@@ -14,10 +14,10 @@
 
 
 /**
- * @brief 
+ * @brief Fonction permettant de deplacer le joueur dans la grille de jeu 
  * 
- * @param grid 
- * @param direction 
+ * @param grid une grille de jeu
+ * @param direction la direction dans laquelle on se deplace
  */
 void move_player(Grid* grid, enum Direction direction){
     ///position x,y actuelle du joueur

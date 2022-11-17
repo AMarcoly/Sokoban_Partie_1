@@ -1,6 +1,6 @@
 /**
  * @file player.h
- * @author your name (you@domain.com)
+ * @author Marcoly ANTOINE/Adrien GAME
  * @brief header pour le joueur
  * @version 0.1
  * @date 2022-11-12
@@ -14,7 +14,7 @@
 
 /**
  * @enum Direction
- * déclaration de l'énumération des directions
+ * \brief declaration de l'énumération des directions
  */
 enum Direction{
 	Top = 'k',		/**< caractère réprésentant la direction haut **/
@@ -36,7 +36,7 @@ struct Player
 
 /**
  * @typedef typedef struct Player Player
- * type synonyme de \c struct \c Player
+ * \brief type synonyme de \c struct \c Player
  */
 typedef struct Player Player;
 

@@ -35,18 +35,19 @@ void init_level(const char* file_path,Grid* grid){
 	fgets(line, 100, file); //Ligne non écrite par nous mais donné
 	sscanf(line, "%d %d %d", &number_column, &number_row, &number_goals);
 	
-	grid->column_number=number_column;
-	grid->row_number=number_row;
-	grid->game_grid = malloc((unsigned long)number_row*sizeof(CaseType*));
-	
+	grid->column_number=number_column;		//affectation dans la structure grille de jeu de la valeur nombre de colonnes
+	grid->row_number=number_row;			//affectation dans la structure grille de jeu de la valeur nombre de lignes
+	grid->game_grid = malloc((unsigned long)number_row*sizeof(CaseType*));	//Allocation de l'espace memoire pour les lignes de la grille
 	int current_row = 0;
 	
+	//lecture de tous les caracteres jusqu'a la derniere ligne de notre fichier txt
 	while(fgets(line, 100, file) != NULL){
 		char* buffer = line;
 		int current_column = 0;
 
-		grid->game_grid[current_row]=malloc(((unsigned long)number_column*sizeof(CaseType))); //on pointe sur le tableau de casetype 'ligne' 
+		grid->game_grid[current_row]=malloc(((unsigned long)number_column*sizeof(CaseType))); //on pointe sur le tableau de casetype 'ligne' et on y affecte la memoire necessaire pour lire le caractere du fichier txt
 
+		//lecture de tous les caracteres jusqu'a la derniere colonne de la ligne courante
 		while(*buffer && *buffer != '\n'){
 			CaseType ct;
 			switch (*buffer){
