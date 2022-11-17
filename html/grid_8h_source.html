@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet_Sokoban_ANTOINE/GAME:  Fichier source de grid.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projet_Sokoban_ANTOINE/GAME
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('grid_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">grid.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="grid_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef GRID_HEADER</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define GRID_HEADER</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="player_8h.html">player.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7ede">   20</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7ede">CaseType</a>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7edeafca2faad41310c7e71ec303ef789c53a">   21</a></span>    <a class="code hl_enumvalue" href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7edeafca2faad41310c7e71ec303ef789c53a">WALL</a> = <span class="charliteral">&#39;#&#39;</span>,     </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7edea311c29de5b0fd16d11c0cf1f98a73370">   22</a></span>    <a class="code hl_enumvalue" href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7edea311c29de5b0fd16d11c0cf1f98a73370">BOX</a> = <span class="charliteral">&#39;$&#39;</span>,      </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7edeade5dc3e0dbd007d995ed3e37bde5ce7e">   23</a></span>    <a class="code hl_enumvalue" href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7edeade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a> = <span class="charliteral">&#39;@&#39;</span>,   </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7edea481acf8650ec2f2e4c0b366fef0368b4">   24</a></span>    <a class="code hl_enumvalue" href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7edea481acf8650ec2f2e4c0b366fef0368b4">GOAL</a> = <span class="charliteral">&#39;.&#39;</span>,     </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_enumvalue" href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7edeac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a> = <span class="charliteral">&#39; &#39;</span>      </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7edeac157bdf0b85a40d2619cbc8bc1ae5fe2">   26</a></span>};</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7ede">CaseType</a> <a class="code hl_enumeration" href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7ede">CaseType</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_grid.html">   40</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_grid.html">Grid</a>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct_grid.html#a05d18c31f25c3852511b052548d731e0">   41</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7ede">CaseType</a>** <a class="code hl_variable" href="struct_grid.html#a05d18c31f25c3852511b052548d731e0">game_grid</a>; </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="struct_grid.html#a3b0f8e63e5219988a543fccc0fbea01c">   42</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_grid.html#a3b0f8e63e5219988a543fccc0fbea01c">column_number</a>; </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="struct_grid.html#a45487e6ca04400fda42d64e3961e39ae">   43</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_grid.html#a45487e6ca04400fda42d64e3961e39ae">row_number</a>; </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="struct_grid.html#acb3dba6f1aeb64bc654c83e43ed5be5c">   44</a></span>    <a class="code hl_struct" href="struct_player.html">Player</a> <a class="code hl_variable" href="struct_grid.html#acb3dba6f1aeb64bc654c83e43ed5be5c">player</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="grid_8h.html#a8f9a8bbb733c9be873a366e7d7bd099a">   51</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_grid.html">Grid</a> <a class="code hl_struct" href="struct_grid.html">Grid</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span> <a class="code hl_function" href="grid_8h.html#a2a2ecaaef8ffb1e1622ac3118e9767e8">init_level</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* file_path, <a class="code hl_struct" href="struct_grid.html">Grid</a>* grid);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">void</span> <a class="code hl_function" href="grid_8h.html#ac30d6fa53d952f655ca3ee62802a62f6">display</a> (<a class="code hl_struct" href="struct_grid.html">Grid</a> *grid);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keywordtype">void</span> <a class="code hl_function" href="grid_8h.html#afa6d458b6bf6bdc83cfd844cab115bc9">move_player</a>(<a class="code hl_struct" href="struct_grid.html">Grid</a>* grid, <span class="keyword">enum</span> <a class="code hl_enumeration" href="player_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> direction);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keywordtype">void</span> <a class="code hl_function" href="grid_8h.html#a457586dcfb5146268f3517a1cd40190a">suppr_grid</a>(<a class="code hl_struct" href="struct_grid.html">Grid</a> * grid);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="ttc" id="agrid_8h_html_a2a2ecaaef8ffb1e1622ac3118e9767e8"><div class="ttname"><a href="grid_8h.html#a2a2ecaaef8ffb1e1622ac3118e9767e8">init_level</a></div><div class="ttdeci">void init_level(const char *file_path, Grid *grid)</div><div class="ttdoc">Fonction qui initialise le niveau pour chaque fichier texte. Il prend en parametre un pointeur sur la...</div><div class="ttdef"><b>Definition:</b> grid.c:22</div></div>
+<div class="ttc" id="agrid_8h_html_a457586dcfb5146268f3517a1cd40190a"><div class="ttname"><a href="grid_8h.html#a457586dcfb5146268f3517a1cd40190a">suppr_grid</a></div><div class="ttdeci">void suppr_grid(Grid *grid)</div><div class="ttdoc">Fonction qui désalloue la mémoire allouée dans la fonction init_level.</div><div class="ttdef"><b>Definition:</b> grid.c:102</div></div>
+<div class="ttc" id="agrid_8h_html_ac30d6fa53d952f655ca3ee62802a62f6"><div class="ttname"><a href="grid_8h.html#ac30d6fa53d952f655ca3ee62802a62f6">display</a></div><div class="ttdeci">void display(Grid *grid)</div><div class="ttdoc">Fonction qui affiche la grille du Sokoban.</div><div class="ttdef"><b>Definition:</b> grid.c:83</div></div>
+<div class="ttc" id="agrid_8h_html_ae3dce15bf664d07448cabc2c438c7ede"><div class="ttname"><a href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7ede">CaseType</a></div><div class="ttdeci">CaseType</div><div class="ttdef"><b>Definition:</b> grid.h:20</div></div>
+<div class="ttc" id="agrid_8h_html_ae3dce15bf664d07448cabc2c438c7edea311c29de5b0fd16d11c0cf1f98a73370"><div class="ttname"><a href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7edea311c29de5b0fd16d11c0cf1f98a73370">BOX</a></div><div class="ttdeci">@ BOX</div><div class="ttdef"><b>Definition:</b> grid.h:22</div></div>
+<div class="ttc" id="agrid_8h_html_ae3dce15bf664d07448cabc2c438c7edea481acf8650ec2f2e4c0b366fef0368b4"><div class="ttname"><a href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7edea481acf8650ec2f2e4c0b366fef0368b4">GOAL</a></div><div class="ttdeci">@ GOAL</div><div class="ttdef"><b>Definition:</b> grid.h:24</div></div>
+<div class="ttc" id="agrid_8h_html_ae3dce15bf664d07448cabc2c438c7edeac157bdf0b85a40d2619cbc8bc1ae5fe2"><div class="ttname"><a href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7edeac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a></div><div class="ttdeci">@ NONE</div><div class="ttdef"><b>Definition:</b> grid.h:25</div></div>
+<div class="ttc" id="agrid_8h_html_ae3dce15bf664d07448cabc2c438c7edeade5dc3e0dbd007d995ed3e37bde5ce7e"><div class="ttname"><a href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7edeade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a></div><div class="ttdeci">@ PLAYER</div><div class="ttdef"><b>Definition:</b> grid.h:23</div></div>
+<div class="ttc" id="agrid_8h_html_ae3dce15bf664d07448cabc2c438c7edeafca2faad41310c7e71ec303ef789c53a"><div class="ttname"><a href="grid_8h.html#ae3dce15bf664d07448cabc2c438c7edeafca2faad41310c7e71ec303ef789c53a">WALL</a></div><div class="ttdeci">@ WALL</div><div class="ttdef"><b>Definition:</b> grid.h:21</div></div>
+<div class="ttc" id="agrid_8h_html_afa6d458b6bf6bdc83cfd844cab115bc9"><div class="ttname"><a href="grid_8h.html#afa6d458b6bf6bdc83cfd844cab115bc9">move_player</a></div><div class="ttdeci">void move_player(Grid *grid, enum Direction direction)</div><div class="ttdoc">fonction permettant de faire bouger le joueur dans la grille</div><div class="ttdef"><b>Definition:</b> player.c:22</div></div>
+<div class="ttc" id="aplayer_8h_html"><div class="ttname"><a href="player_8h.html">player.h</a></div><div class="ttdoc">header pour le joueur</div></div>
+<div class="ttc" id="aplayer_8h_html_a224b9163917ac32fc95a60d8c1eec3aa"><div class="ttname"><a href="player_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a></div><div class="ttdeci">Direction</div><div class="ttdoc">declaration de l'énumération des directions</div><div class="ttdef"><b>Definition:</b> player.h:19</div></div>
+<div class="ttc" id="astruct_grid_html"><div class="ttname"><a href="struct_grid.html">Grid</a></div><div class="ttdoc">Cette structure contient les informations concernant la grille du jeu et son contenu.</div><div class="ttdef"><b>Definition:</b> grid.h:40</div></div>
+<div class="ttc" id="astruct_grid_html_a05d18c31f25c3852511b052548d731e0"><div class="ttname"><a href="struct_grid.html#a05d18c31f25c3852511b052548d731e0">Grid::game_grid</a></div><div class="ttdeci">enum CaseType ** game_grid</div><div class="ttdoc">Tableau contenant les entités présents dans le jeu.</div><div class="ttdef"><b>Definition:</b> grid.h:41</div></div>
+<div class="ttc" id="astruct_grid_html_a3b0f8e63e5219988a543fccc0fbea01c"><div class="ttname"><a href="struct_grid.html#a3b0f8e63e5219988a543fccc0fbea01c">Grid::column_number</a></div><div class="ttdeci">int column_number</div><div class="ttdoc">Nombre de colonne de game_grid.</div><div class="ttdef"><b>Definition:</b> grid.h:42</div></div>
+<div class="ttc" id="astruct_grid_html_a45487e6ca04400fda42d64e3961e39ae"><div class="ttname"><a href="struct_grid.html#a45487e6ca04400fda42d64e3961e39ae">Grid::row_number</a></div><div class="ttdeci">int row_number</div><div class="ttdoc">Nomber de ligne de game_grid.</div><div class="ttdef"><b>Definition:</b> grid.h:43</div></div>
+<div class="ttc" id="astruct_grid_html_acb3dba6f1aeb64bc654c83e43ed5be5c"><div class="ttname"><a href="struct_grid.html#acb3dba6f1aeb64bc654c83e43ed5be5c">Grid::player</a></div><div class="ttdeci">Player player</div><div class="ttdoc">Joueur.</div><div class="ttdef"><b>Definition:</b> grid.h:44</div></div>
+<div class="ttc" id="astruct_player_html"><div class="ttname"><a href="struct_player.html">Player</a></div><div class="ttdoc">déclaration de la structure joueur</div><div class="ttdef"><b>Definition:</b> player.h:32</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="grid_8h.html">grid.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+  </ul>
+</div>
+</body>
+</html>
