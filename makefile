@@ -5,6 +5,7 @@ H_REP = include/
 O_REP = obj/
 B_REP = bin/
 D_REP = doc/
+CC = gcc
 
 EXE = $(B_REP)main
 SRC = $(wildcard $(S_REP)*.c)
@@ -16,10 +17,10 @@ CFLAGS := -Wall -Wextra \
 LDLIBS = -lm
 
 $(EXE) : $(OBJ) | $(B_REP)
-	gcc  $^ $(LDLIBS) -o $@ $(LDFLAGS)
+	$(CC)  $^ $(LDLIBS) -o $@ $(LDFLAGS)
 
 $(O_REP)%.o : $(S_REP)%.c | $(O_REP)
-	gcc -c $< -o $@
+	$(CC) -c $< -o $@
 
 $(B_REP) $(O_REP):
 	mkdir $@
