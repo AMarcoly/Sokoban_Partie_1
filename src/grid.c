@@ -98,7 +98,7 @@ void display (Grid* grid){
 /**
  * @brief Fonction qui désalloue la mémoire allouée dans la fonction init_level 
  * 
- * @param grid la grille de jeu
+ * @param grid pointeur sur grille de jeu
  */
 void suppr_grid (Grid* grid){
 	for (int i =0; i<grid->row_number;i++){

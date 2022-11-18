@@ -53,7 +53,7 @@ typedef struct Grid Grid;
 /**
  * @fn fonction qui initie le niveau de jeu
  * 
- * @param file_path 
+ * @param file_path fichier txt  
  * @param grid Pointeur sur la grille de jeu
  */
 void init_level(const char* file_path, Grid* grid);
@@ -66,7 +66,7 @@ void init_level(const char* file_path, Grid* grid);
 void display (Grid *grid);
 
 /**
- * @brief fonction permettant de faire bouger le joueur dans la grille
+ * @brief Fonction permettant de faire bouger le joueur dans la grille
  * 
  * @param grid une grille de jeu
  * @param direction la direction dans laquelle on souhaite se diriger
@@ -74,9 +74,9 @@ void display (Grid *grid);
 void move_player(Grid* grid, enum Direction direction);
 
 /**
- * @fn fonction suppr_grid qui va désallouer l'espace mémoire allouée pour notre jeu
+ * @fn Fonction suppr_grid qui va désallouer l'espace mémoire allouée pour notre jeu
  * 
- * @param grid 
+ * @param grid pointeur sur grille de jeu
  */
 void suppr_grid(Grid * grid);
 #endif
