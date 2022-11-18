@@ -1,4 +1,4 @@
-.PHONY: all dist clean distclean doc
+.PHONY: all clean doc archive archiveclean
 
 S_REP = src/
 H_REP = include/
@@ -9,12 +9,14 @@ D_REP = doc/
 EXE = $(B_REP)main
 SRC = $(wildcard $(S_REP)*.c)
 OBJ = $(SRC:$(S_REP)%.c=$(O_REP)%.o)
-
-CFLAGS := -Wall -Wextra
+RM 	= rm
+CFLAGS := -Wall -Wextra \
+		 -Wdouble-promotion -Wformat=2 -Winit-self -Wswitch-default \
+		-Wswitch-enum -Wunused-parameter -Wuninitialized -Wfloat-equal	
 LDLIBS = -lm
 
 $(EXE) : $(OBJ) | $(B_REP)
-	gcc  $^ $(LDLIBS) -o $@
+	gcc  $^ $(LDLIBS) -o $@ $(LDFLAGS)
 
 $(O_REP)%.o : $(S_REP)%.c | $(O_REP)
 	gcc -c $< -o $@
@@ -26,8 +28,14 @@ doc :
 	doxygen Doxyfile
 
 clean :
-	rm -r $(O_REP) $(B_REP) $(D_REP)
+	$(RM) -r $(O_REP) $(B_REP) $(D_REP)
+# Archive
+archive:
+	tar -czf ANTOINE_Marcoly_GAME_Adrien.tar.gz $(S_REP) $(H_REP) makefile *.md Doxyfile
 
+#Suppression de l'archive
+archiveclean:
+	$(RM) *.tar.gz
 
 
 
