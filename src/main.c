@@ -11,8 +11,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "grid.h"
-#include "player.h"
+#include "../include/grid.h"
+#include "../include/player.h"
 
 /**
  * @brief Fonction principale du programme
@@ -35,7 +35,7 @@ int main(void){
 			}
 			case 'r' : {
 				start = true;
-				init_level("level1.txt",&grid);
+				init_level("../src/level1.txt",&grid);
 				display(&grid);
 				printf("Déplacements : h = gauche , j = bas, k = haut , l = droite, r = recommencer le jeu\n");
 				break;

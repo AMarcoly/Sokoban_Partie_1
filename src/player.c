@@ -9,8 +9,8 @@
  * 
  */
 
-#include "player.h"
-#include "grid.h"
+#include "../include/player.h"
+#include "../include/grid.h"
 
 
 /**
