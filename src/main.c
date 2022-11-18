@@ -17,7 +17,7 @@
 /**
  * @brief Fonction principale du programme
  * 
- * @return int 
+ * @return int : la sortie du programme
  */
 int main(void){
 	bool start = false; // jeu commencé?

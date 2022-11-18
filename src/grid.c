@@ -18,7 +18,7 @@
  * @brief Fonction qui initialise le niveau pour chaque fichier texte. Il prend en parametre un pointeur sur la grille de jeu et un pointeur sur le fichier contenant le niveau de jeu  
  * 
  * @param file_path un fichier txt lu
- * @param grid une grille de jeu 
+ * @param grid pointeur sur grille de jeu 
  */
 void init_level(const char* file_path,Grid* grid){
 	// ouverture du fichier en mode lecture
@@ -79,7 +79,7 @@ void init_level(const char* file_path,Grid* grid){
 
 /**
  * @brief Fonction qui affiche la grille du Sokoban
- * @param grid la grille de jeu
+ * @param grid pointeur sur grille de jeu
  */
 void display (Grid* grid){
 
