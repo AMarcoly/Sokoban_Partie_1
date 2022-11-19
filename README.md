@@ -27,5 +27,5 @@ Thread model: posixersion
 
 ## Dépendances: 
 
-- librairie <stdbool>
+- librairie <stdbool.h>
 - librairie <stiod.h>
